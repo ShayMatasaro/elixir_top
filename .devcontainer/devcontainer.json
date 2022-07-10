@@ -1,0 +1,47 @@
+{
+	"name": "top elixir ",
+	"dockerFile": "Dockerfile",
+	// "workspaceFolder": "/workspace",
+    "build": {
+        "args": { 
+            "VARIANT":"1.13.4-erlang-24.3.4-debian-bullseye-20210902"
+        }
+    },
+
+	// Set *default* container specific settings.json values on container create.
+	// "settings": {
+	// 	"sqltools.connections": [{
+	// 		"name": "Container database",
+	// 		"driver": "PostgreSQL",
+	// 		"previewLimit": 50,
+	// 		"server": "localhost",
+	// 		"port": 5432,
+	// 		"database": "postgres",
+	// 		"username": "postgres",
+	// 		"password": "postgres"
+	// 	}],
+	// 	"elixirLS.fetchDeps": false
+	// },
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		// "jakebecker.elixir-ls",
+		// "mtxr.sqltools",
+		// "mtxr.sqltools-driver-pg",
+		// "wakatime.vscode-wakatime"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [4000, 4001, 5432],
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "mix deps.get",
+	  // IDEA: Add the 'hex install' and whatever else here
+
+	// Use 'postStartCommand' to run commands when the container starts (in all cases).
+	  // Sets up the postgres user as non-root then boots into a root terminal
+	// "postStartCommand": "sudo su"
+}
